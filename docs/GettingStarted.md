@@ -3,7 +3,7 @@
 Install the Design System in your application
 
 ```sh
-yarn add @hackclub/design-system
+yarn add @mechatronick/datum-design-system
 ```
 
 ## ThemeProvider

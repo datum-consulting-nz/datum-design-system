@@ -1,12 +1,12 @@
-# Hack Club Design System
+# Datum Consulting Group's design system
 
-https://design.hackclub.com/
+https://github.com/mechatroNick/datum-design-system
 
 ```sh
-yarn add @hackclub/design-system
+yarn add @mechatronick/datum-design-system
 ```
 
-This project is heavily inspired by [Priceline.com’s design system][pcln].
+This project is heavily inspired by [Priceline.com’s design system][pcln] and [Hackclub.com’s design system][hacl].
 
 ## Contributing
 
@@ -35,6 +35,7 @@ We hope to accomplish these goals by:
 * Providing easy-to-use and extensible components for anyone to consume
 
 [pcln]: https://github.com/pricelinelabs/design-system
+[hacl]: https://github.com/hackclub/design-system
 [site]: https://hackclub.github.io/design-system/
 
 [MIT License](LICENSE.md)

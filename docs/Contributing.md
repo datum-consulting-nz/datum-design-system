@@ -16,8 +16,8 @@ To contribute code to the Design System, first you’ll need to set it up for lo
 ### Clone the repo
 
 ```sh
-git clone https://github.com/hackclub/design-system.git
-cd design-system
+git clone https://github.com/mechatroNick/datum-design-system.git
+cd datum-design-system
 ```
 
 ### Install dependencies
