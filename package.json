@@ -1,7 +1,7 @@
 {
-  "name": "@hackclub/design-system",
+  "name": "@mechatronick/datum-design-system",
   "version": "0.0.1-14",
-  "description": "Hack Club Design System",
+  "description": "Datum Consulting Group's Design System",
   "main": "dist/index.js",
   "scripts": {
     "prepare": "babel src -d dist --ignore __tests__ && yarn run fmt",
@@ -13,7 +13,7 @@
     "coverage": "jest --coverage && serve coverage -o",
     "test": "jest"
   },
-  "author": "Lachlan Campbell",
+  "author": "Nick Do",
   "license": "MIT",
   "dependencies": {
     "@hackclub/icons": "^0.0.1",
@@ -58,10 +58,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hackclub/design-system.git"
+    "url": "git+https://github.com/mechatroNick/datum-design-system.git"
   },
   "bugs": {
-    "url": "https://github.com/hackclub/design-system/issues"
+    "url": "https://github.com/mechatroNick/datum-design-system/issues"
   },
-  "homepage": "https://design.hackclub.com"
+  "homepage": "https://datumhq.com",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [
+    "React.js",
+    "Design System"
+  ]
 }
