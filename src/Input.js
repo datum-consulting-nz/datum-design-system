@@ -1,20 +1,20 @@
-import React from 'react'
-import styled from 'styled-components'
-import { fontSize, space, width, color, propTypes } from 'styled-system'
-import theme, { filterProps } from './theme'
-import PropTypes from 'prop-types'
+import React from "react";
+import styled from "styled-components";
+import { fontSize, space, width, color, propTypes } from "styled-system";
+import theme, { filterProps } from "./theme";
+import PropTypes from "prop-types";
 
 const chevron = () => {
-  const props = `xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'`
-  const slate = '%23' + theme.colors.slate.replace('#', '')
-  const pathProps = `fill='${slate}' d='M2 0L0 2h4zm0 5L0 3h4z'`
-  return `%3Csvg ${props}%3E%3Cpath ${pathProps}/%3E%3C/svg%3E`
-}
+  const props = `xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'`;
+  const slate = "%23" + theme.colors.slate.replace("#", "");
+  const pathProps = `fill='${slate}' d='M2 0L0 2h4zm0 5L0 3h4z'`;
+  return `%3Csvg ${props}%3E%3Cpath ${pathProps}/%3E%3C/svg%3E`;
+};
 
 const Base = props => {
-  const next = filterProps(props)
-  return <input {...next} />
-}
+  const next = filterProps(props);
+  return <input {...next} />;
+};
 
 const Input = styled(Base)`
   appearance: none;
@@ -55,9 +55,9 @@ const Input = styled(Base)`
   }
 
   ${fontSize} ${space} ${width} ${color};
-`
+`;
 
-Input.displayName = 'Input'
+Input.displayName = "Input";
 
 Input.propTypes = {
   id: PropTypes.string,
@@ -65,7 +65,7 @@ Input.propTypes = {
   ...propTypes.space,
   ...propTypes.width,
   ...propTypes.color
-}
+};
 
 Input.defaultProps = {
   theme,
@@ -74,11 +74,11 @@ Input.defaultProps = {
   py: 1,
   px: 2,
   fontSize: 2,
-  color: 'inherit',
-  bg: 'transparent'
-}
+  color: "inherit",
+  bg: "transparent"
+};
 
-export const InputSelect = Input.withComponent('select')
-export const InputTextarea = Input.withComponent('textarea')
+export const InputSelect = Input.withComponent("select");
+export const InputTextarea = Input.withComponent("textarea");
 
-export default Input
+export default Input;

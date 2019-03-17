@@ -1,6 +1,6 @@
-import Box from './Box'
-import theme, { cx, hexa } from './theme'
-import styled, { css } from 'styled-components'
+import Box from "./Box";
+import theme, { cx, hexa } from "./theme";
+import styled, { css } from "styled-components";
 import {
   space,
   width,
@@ -8,10 +8,10 @@ import {
   fontSize,
   textAlign,
   propTypes
-} from 'styled-system'
-import PropTypes from 'prop-types'
+} from "styled-system";
+import PropTypes from "prop-types";
 
-const Button = Box.withComponent('a').extend`
+const Button = Box.withComponent("a").extend`
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   vertical-align: middle;
@@ -29,31 +29,31 @@ const Button = Box.withComponent('a').extend`
   border: none;
 
   ${props =>
-    props.inverted && {
-      backgroundColor: cx(props.color),
-      color: cx(props.bg)
-    }};
+  props.inverted && {
+    backgroundColor: cx(props.color),
+    color: cx(props.bg)
+  }};
 
   &:hover,
   &:focus {
     outline: 0;
     box-shadow: 0 2px 6px
       ${props =>
-        props.inverted ? props.theme.shadowColor : hexa(props.bg, 0.25)};
+  props.inverted ? props.theme.shadowColor : hexa(props.bg, 0.25)};
   }
 
   &:active {
     outline: 0;
     box-shadow: 0 2px 8px 2px
       ${props =>
-        props.inverted ? props.theme.shadowColor : hexa(props.bg, 0.25)};
+  props.inverted ? props.theme.shadowColor : hexa(props.bg, 0.25)};
   }
 
-  ${props => props.disabled && { opacity: 0.25, cursor: 'not-allowed' }};
+  ${props => props.disabled && { opacity: 0.25, cursor: "not-allowed" }};
 
   ${props =>
-    props.scale &&
-    css`
+  props.scale &&
+  css`
       transition: ${({ theme }) => theme.transition} all;
       will-change: transform;
       transform: scale(1);
@@ -67,24 +67,24 @@ const Button = Box.withComponent('a').extend`
     `};
 
   ${props =>
-    props.chevronLeft &&
-    css`
+  props.chevronLeft &&
+  css`
       &:before {
         content: '«';
         padding-right: 0.25em;
       }
     `};
   ${props =>
-    props.chevronRight &&
-    css`
+  props.chevronRight &&
+  css`
       &:after {
         content: '»';
         padding-left: 0.25em;
       }
     `};
-`
+`;
 
-Button.displayName = 'Button'
+Button.displayName = "Button";
 
 Button.propTypes = {
   /** flip colors */
@@ -95,19 +95,19 @@ Button.propTypes = {
   chevronLeft: PropTypes.bool,
   /** add right text arrows */
   chevronRight: PropTypes.bool
-}
+};
 
 Button.defaultProps = {
   theme,
-  bg: 'primary',
-  color: 'white',
+  bg: "primary",
+  color: "white",
   fontSize: 3,
   m: 0,
   px: 3,
   py: 2
-}
+};
 
-Button.button = Button.withComponent('button')
-Button.input = Button.withComponent('input')
+Button.button = Button.withComponent("button");
+Button.input = Button.withComponent("input");
 
-export default Button
+export default Button;

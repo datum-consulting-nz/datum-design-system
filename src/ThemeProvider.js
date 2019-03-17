@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react'
-import { ThemeProvider as Root, injectGlobal, css } from 'styled-components'
-import PropTypes from 'prop-types'
-import theme from './theme'
+import React, { Fragment } from "react";
+import { ThemeProvider as Root, injectGlobal, css } from "styled-components";
+import PropTypes from "prop-types";
+import theme from "./theme";
 
 const fontsCss = css`
   @font-face {
@@ -24,7 +24,7 @@ const fontsCss = css`
     font-style: normal;
     font-display: swap;
   }
-`
+`;
 
 injectGlobal`
   * {
@@ -64,27 +64,27 @@ injectGlobal`
   strong {
     font-weight: bold;
   }
-`
+`;
 
 const ThemeProvider = ({ theme, webfonts, ...props }) => {
-  if (webfonts) injectGlobal([], fontsCss)
+  if (webfonts) injectGlobal([], fontsCss);
   return (
     <Root
       theme={theme}
       {...props}
       children={<Fragment>{props.children}</Fragment>}
     />
-  )
-}
+  );
+};
 
 ThemeProvider.propTypes = {
   theme: PropTypes.object,
   webfonts: PropTypes.bool
-}
+};
 
 ThemeProvider.defaultProps = {
   theme,
   webfonts: false
-}
+};
 
-export default ThemeProvider
+export default ThemeProvider;

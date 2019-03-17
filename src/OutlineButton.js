@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import LargeButton from './LargeButton'
-import theme, { cx } from './theme'
+import styled from "styled-components";
+import LargeButton from "./LargeButton";
+import theme, { cx } from "./theme";
 
 const OutlineButton = LargeButton.extend`
   background: transparent;
@@ -16,18 +16,18 @@ const OutlineButton = LargeButton.extend`
     transition: ${({ theme }) => theme.transition} background,
       ${({ theme }) => theme.transition} color;
   }
-`
+`;
 
-OutlineButton.displayName = 'OutlineButton'
+OutlineButton.displayName = "OutlineButton";
 
 OutlineButton.defaultProps = {
   theme,
-  bg: 'primary',
-  color: 'white',
+  bg: "primary",
+  color: "white",
   fontSize: 3,
   py: theme.space[3] - 2,
   px: theme.space[4] - 2,
   m: 0
-}
+};
 
-export default OutlineButton
+export default OutlineButton;

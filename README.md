@@ -12,6 +12,10 @@ This project is heavily inspired by [Priceline.com’s design system][pcln] and 
 
 Please be sure to read the [Contributing](docs/Contributing.md) doc :)
 
+```sh
+npm run dev
+```
+
 ## [Documentation](docs)
 
 * [Getting Started](docs/GettingStarted.md)

@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import React from 'react'
-import Box from './Box'
-import { keyframes } from 'styled-components'
+import styled from "styled-components";
+import React from "react";
+import Box from "./Box";
+import { keyframes } from "styled-components";
 
 const animation = keyframes`
   0% {
@@ -14,7 +14,7 @@ const animation = keyframes`
     height: 56px;
     opacity: 0;
   }
-`
+`;
 
 const Base = styled(Box)`
   display: inline-flex;
@@ -26,7 +26,7 @@ const Base = styled(Box)`
   transform: translate(-50%, -50%);
   width: 64px;
   height: 64px;
-`
+`;
 const Inner = styled(Box)`
   position: absolute;
   border: 4px solid currentColor;
@@ -34,17 +34,17 @@ const Inner = styled(Box)`
   border-radius: ${({ theme }) => theme.pill};
   transform-origin: center;
   animation: ${animation} 0.975s ease-out infinite;
-`
+`;
 
 const Loading = props => (
   <Base aria-role="presentation" aria-label="Loading" {...props}>
-    <Inner />
-    <Inner />
+    <Inner/>
+    <Inner/>
   </Base>
-)
+);
 
 Loading.defaultProps = {
-  color: 'primary'
-}
+  color: "primary"
+};
 
-export default Loading
+export default Loading;

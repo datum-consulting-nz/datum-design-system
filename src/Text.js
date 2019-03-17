@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 import {
   fontSize,
   fontWeight,
@@ -8,20 +8,20 @@ import {
   space,
   color,
   propTypes
-} from 'styled-system'
-import theme, { filterProps } from './theme'
+} from "styled-system";
+import theme, { filterProps } from "./theme";
 
 export const caps = props =>
-  props.caps ? { textTransform: 'uppercase' } : null
+  props.caps ? { textTransform: "uppercase" } : null;
 
-export const regular = props => props.regular && { fontWeight: 'regular' }
+export const regular = props => props.regular && { fontWeight: "regular" };
 
-export const bold = props => props.bold && { fontWeight: 'bold' }
+export const bold = props => props.bold && { fontWeight: "bold" };
 
 const Base = props => {
-  const next = filterProps(props)
-  return <p {...next} />
-}
+  const next = filterProps(props);
+  return <p {...next} />;
+};
 
 const Text = styled(Base)(
   [],
@@ -33,9 +33,9 @@ const Text = styled(Base)(
   bold,
   regular,
   fontWeight
-)
+);
 
-Text.displayName = 'Text'
+Text.displayName = "Text";
 
 Text.propTypes = {
   caps: PropTypes.bool,
@@ -46,15 +46,15 @@ Text.propTypes = {
   ...propTypes.textAlign,
   ...propTypes.space,
   ...propTypes.color
-}
+};
 
 Text.defaultProps = {
   theme,
   m: 0
-}
+};
 
-Text.span = Text.withComponent('span')
-Text.p = Text.withComponent('p')
-Text.s = Text.withComponent('s')
+Text.span = Text.withComponent("span");
+Text.p = Text.withComponent("p");
+Text.s = Text.withComponent("s");
 
-export default Text
+export default Text;

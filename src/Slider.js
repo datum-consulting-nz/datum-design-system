@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
-import { space, width, color, propTypes } from 'styled-system'
-import theme from './theme'
-import PropTypes from 'prop-types'
+import React from "react";
+import styled from "styled-components";
+import { space, width, color, propTypes } from "styled-system";
+import theme from "./theme";
+import PropTypes from "prop-types";
 
-const Slider = styled.input.attrs({ type: 'range' })`
+const Slider = styled.input.attrs({ type: "range" })`
   appearance: none;
   display: block;
   border-radius: ${({ theme }) => theme.pill};
@@ -21,21 +21,21 @@ const Slider = styled.input.attrs({ type: 'range' })`
   }
 
   ${space} ${width} ${color};
-`
+`;
 
-Slider.displayName = 'Input'
+Slider.displayName = "Input";
 
 Slider.propTypes = {
   ...propTypes.space,
   ...propTypes.width,
   ...propTypes.color
-}
+};
 
 Slider.defaultProps = {
   theme,
   w: 1,
-  bg: 'smoke',
-  color: 'primary'
-}
+  bg: "smoke",
+  color: "primary"
+};
 
-export default Slider
+export default Slider;

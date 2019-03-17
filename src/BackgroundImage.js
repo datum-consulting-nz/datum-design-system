@@ -1,11 +1,11 @@
-import Box from './Box'
-import PropTypes from 'prop-types'
-import theme from './theme'
-import styled, { css } from 'styled-components'
+import Box from "./Box";
+import PropTypes from "prop-types";
+import theme from "./theme";
+import styled, { css } from "styled-components";
 
-const src = props => props.src && { backgroundImage: `url(${props.src})` }
+const src = props => props.src && { backgroundImage: `url(${props.src})` };
 
-const height = props => props.height && { height: props.height }
+const height = props => props.height && { height: props.height };
 
 const BackgroundImage = styled(Box)`
   background-position: center;
@@ -14,8 +14,8 @@ const BackgroundImage = styled(Box)`
   ${src} ${height};
 
   ${props =>
-    props.scale &&
-    css`
+  props.scale &&
+  css`
       overflow: hidden;
       transition: ${({ theme }) => theme.transition} background-size;
       will-change: background-size;
@@ -29,9 +29,9 @@ const BackgroundImage = styled(Box)`
         background-size: cover !important;
       }
     `};
-`
+`;
 
-BackgroundImage.displayName = 'BackgroundImage'
+BackgroundImage.displayName = "BackgroundImage";
 
 BackgroundImage.propTypes = {
   /** background-image url */
@@ -39,12 +39,12 @@ BackgroundImage.propTypes = {
   /** add hover animation */
   scale: PropTypes.bool,
   /** accessible label */
-  'aria-label': PropTypes.string.isRequired
-}
+  "aria-label": PropTypes.string.isRequired
+};
 
 BackgroundImage.defaultProps = {
   theme,
-  bg: 'smoke'
-}
+  bg: "smoke"
+};
 
-export default BackgroundImage
+export default BackgroundImage;

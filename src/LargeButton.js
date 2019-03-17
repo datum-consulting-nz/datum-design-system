@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import Button from './Button'
-import theme, { hexa } from './theme'
+import styled from "styled-components";
+import Button from "./Button";
+import theme, { hexa } from "./theme";
 
 const LargeButton = Button.extend`
   text-transform: uppercase;
@@ -10,25 +10,25 @@ const LargeButton = Button.extend`
   &:focus {
     box-shadow: 0 2px 12px 2px
       ${props =>
-        props.inverted ? props.theme.shadowColor : hexa(props.bg, 0.25)};
+  props.inverted ? props.theme.shadowColor : hexa(props.bg, 0.25)};
   }
 
   &:active {
     box-shadow: 0 4px 16px 2px
       ${props =>
-        props.inverted ? props.theme.shadowColor : hexa(props.bg, 0.25)};
+  props.inverted ? props.theme.shadowColor : hexa(props.bg, 0.25)};
   }
-`
+`;
 
-LargeButton.displayName = 'LargeButton'
+LargeButton.displayName = "LargeButton";
 
 LargeButton.defaultProps = {
   theme,
-  bg: 'primary',
-  color: 'white',
+  bg: "primary",
+  color: "white",
   fontSize: 3,
   py: 3,
   px: 4
-}
+};
 
-export default LargeButton
+export default LargeButton;
