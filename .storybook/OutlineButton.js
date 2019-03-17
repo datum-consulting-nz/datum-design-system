@@ -1,17 +1,17 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
-import { OutlineButton, LargeButton } from '../src'
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { withInfo } from "@storybook/addon-info";
+import { OutlineButton, LargeButton } from "../src";
 
-storiesOf('OutlineButton', module)
+storiesOf("OutlineButton", module)
   .add(
-    'OutlineButton component',
+    "OutlineButton component",
     withInfo({
       inline: true,
-      text: 'A <Button /> component with only an outline.'
+      text: "A <Button /> component with only an outline."
     })(() => <OutlineButton>Button</OutlineButton>)
   )
-  .add('Colors', () => (
+  .add("Colors", () => (
     <div>
       <OutlineButton mr={3}>Button</OutlineButton>
       <OutlineButton bg="accent" mr={3}>
@@ -23,5 +23,5 @@ storiesOf('OutlineButton', module)
       <LargeButton bg="success">Large</LargeButton>
     </div>
   ))
-  .add('Width', () => <OutlineButton width={1}>Full Width</OutlineButton>)
-  .add('Disabled', () => <OutlineButton disabled>Disabled</OutlineButton>)
+  .add("Width", () => <OutlineButton width={1}>Full Width</OutlineButton>)
+  .add("Disabled", () => <OutlineButton disabled>Disabled</OutlineButton>);

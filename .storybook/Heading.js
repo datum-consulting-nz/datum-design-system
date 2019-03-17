@@ -1,22 +1,22 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
-import { Heading } from '../src'
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { withInfo } from "@storybook/addon-info";
+import { Heading } from "../src";
 
 const description =
-  'A type of the <Text> component' +
-  ' using HTML h1-h6 element for setting section headings,' +
-  ' supporting all <Text> props.'
+  "A type of the <Text> component" +
+  " using HTML h1-h6 element for setting section headings," +
+  " supporting all <Text> props.";
 
-storiesOf('Heading', module)
+storiesOf("Heading", module)
   .add(
-    'Heading component',
+    "Heading component",
     withInfo({
       inline: true,
       text: description
     })(() => <Heading m={3}>Heading component (renders h2)</Heading>)
   )
-  .add('Using dot-notation with h1-h6', () => (
+  .add("Using dot-notation with h1-h6", () => (
     <section>
       <Heading.h1>Heading h1</Heading.h1>
       <Heading.h2>Heading h2 (default)</Heading.h2>
@@ -26,7 +26,7 @@ storiesOf('Heading', module)
       <Heading.h6>Heading h6</Heading.h6>
     </section>
   ))
-  .add('Using <Text> props', () => (
+  .add("Using <Text> props", () => (
     <section>
       <Heading align="left" bold fontSize={6} color="primary">
         Heading Left
@@ -38,4 +38,4 @@ storiesOf('Heading', module)
         Heading Right
       </Heading>
     </section>
-  ))
+  ));

@@ -1,14 +1,14 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
-import { Card } from '../src'
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { withInfo } from "@storybook/addon-info";
+import { Card } from "../src";
 
-storiesOf('Card', module)
+storiesOf("Card", module)
   .add(
-    'Card component',
+    "Card component",
     withInfo({
       inline: true,
-      text: 'Box extension to control box-shadow.'
+      text: "Box extension to control box-shadow."
     })(() => (
       <div>
         <Card
@@ -54,7 +54,7 @@ storiesOf('Card', module)
       </div>
     ))
   )
-  .add('Box Shadows with custom borders', () => (
+  .add("Box Shadows with custom borders", () => (
     <div>
       <Card
         boxShadowSize="sm"
@@ -106,7 +106,7 @@ storiesOf('Card', module)
       </Card>
     </div>
   ))
-  .add('Box Shadows with varying border radii', () => (
+  .add("Box Shadows with varying border radii", () => (
     <div>
       <Card
         boxShadowSize="sm"
@@ -153,4 +153,4 @@ storiesOf('Card', module)
         XLarge Shadow
       </Card>
     </div>
-  ))
+  ));

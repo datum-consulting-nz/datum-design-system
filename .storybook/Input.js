@@ -1,22 +1,22 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
-import { Box, Input, Label, theme } from '../src'
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { withInfo } from "@storybook/addon-info";
+import { Box, Input, Label, theme } from "../src";
 
-storiesOf('Input', module)
+storiesOf("Input", module)
   .add(
-    'Input component',
+    "Input component",
     withInfo({
       inline: true,
       text:
-        'Simple styled input component that accepts a color and optionally, an error message.'
-    })(() => <Input my={3} id="hello" />)
+        "Simple styled input component that accepts a color and optionally, an error message."
+    })(() => <Input my={3} id="hello"/>)
   )
-  .add('With external label', () => (
+  .add("With external label", () => (
     <Box width={256}>
       <Label fontSize={4} htmlFor="sample-input">
         Label!
       </Label>
-      <Input id="sample-input" placeholder="Click the label" />
+      <Input id="sample-input" placeholder="Click the label"/>
     </Box>
-  ))
+  ));

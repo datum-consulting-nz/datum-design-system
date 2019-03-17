@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
-import { storiesOf } from '@storybook/react'
-import { Box, Flex, Heading, Text, Link, Button, Avatar } from '../src'
-import styled from 'styled-components'
+import React, { Fragment } from "react";
+import { storiesOf } from "@storybook/react";
+import { Box, Flex, Heading, Text, Link, Button, Avatar } from "../src";
+import styled from "styled-components";
 
-const List = Box.withComponent('ul')
-const Item = Text.withComponent('li')
-const Code = Text.withComponent('pre')
+const List = Box.withComponent("ul");
+const Item = Text.withComponent("li");
+const Code = Text.withComponent("pre");
 
 const Flag = styled(Link)`
   display: inline-block;
@@ -15,15 +15,15 @@ const Flag = styled(Link)`
   height: 3rem;
   z-index: 0;
   margin-top: -1rem;
-`
+`;
 
-storiesOf('👋 Welcome!', module).add('About the project', () => (
+storiesOf("👋 Welcome!", module).add("About the project", () => (
   <Fragment>
-    <Flag href="https://hackclub.com" />
+    <Flag href="https://hackclub.com"/>
     <Heading.h1 f={5}>Welcome!</Heading.h1>
     <Text f={3} my={2}>
-      This is{' '}
-      <Link href="https://hackclub.com" underline children="Hack Club" />
+      This is{" "}
+      <Link href="https://hackclub.com" underline children="Hack Club"/>
       ’s Design System.
     </Text>
     <Text>It’s a collection of React components designed to:</Text>
@@ -61,8 +61,8 @@ storiesOf('👋 Welcome!', module).add('About the project', () => (
       />
     </Flex>
     <Flex align="center" mt={4}>
-      <Avatar src="https://hackclub.com/team/lachlan.jpg" size={48} mr={2} />
+      <Avatar src="https://hackclub.com/team/lachlan.jpg" size={48} mr={2}/>
       <Text>- @lachlanjc</Text>
     </Flex>
   </Fragment>
-))
+));

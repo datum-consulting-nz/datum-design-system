@@ -1,17 +1,17 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
-import { Button, Flex } from '../src'
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { withInfo } from "@storybook/addon-info";
+import { Button, Flex } from "../src";
 
-storiesOf('Button', module)
+storiesOf("Button", module)
   .add(
-    'Button component',
+    "Button component",
     withInfo({
       inline: true,
-      text: 'Use the <Button /> component to render a primitive button.'
+      text: "Use the <Button /> component to render a primitive button."
     })(() => <Button>Button</Button>)
   )
-  .add('Colors', () => (
+  .add("Colors", () => (
     <Flex wrap>
       <Button mr={2}>Button</Button>
       <Button bg="accent" mr={2}>
@@ -25,7 +25,7 @@ storiesOf('Button', module)
       </Button>
     </Flex>
   ))
-  .add('Font size', () => (
+  .add("Font size", () => (
     <Flex align="baseline" wrap>
       <Button mr={2} f={1}>
         Size 1
@@ -41,10 +41,10 @@ storiesOf('Button', module)
       </Button>
     </Flex>
   ))
-  .add('Width', () => <Button w={1}>Full Width</Button>)
-  .add('Disabled', () => <Button disabled>Disabled</Button>)
-  .add('Scale', () => <Button scale>Scale</Button>)
-  .add('Chevrons', () => (
+  .add("Width", () => <Button w={1}>Full Width</Button>)
+  .add("Disabled", () => <Button disabled>Disabled</Button>)
+  .add("Scale", () => <Button scale>Scale</Button>)
+  .add("Chevrons", () => (
     <Flex wrap>
       <Button bg="info" mr={3} chevronLeft>
         Back
@@ -53,4 +53,4 @@ storiesOf('Button', module)
         Forward
       </Button>
     </Flex>
-  ))
+  ));

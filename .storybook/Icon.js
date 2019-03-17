@@ -1,22 +1,22 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
-import { Icon, Flex, LargeButton } from '../src'
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { withInfo } from "@storybook/addon-info";
+import { Icon, Flex, LargeButton } from "../src";
 
-storiesOf('Icon', module)
+storiesOf("Icon", module)
   .add(
-    'Icon component',
+    "Icon component",
     withInfo({
       inline: true,
-      text: 'A wrapper component for @hackclub/icons.'
-    })(() => <Icon glyph="flag" color="primary" size={48} />)
+      text: "A wrapper component for @hackclub/icons."
+    })(() => <Icon glyph="flag" color="primary" size={48}/>)
   )
-  .add('Examples', () => (
+  .add("Examples", () => (
     <div>
       <Flex align="center" mb={3}>
-        <Icon glyph="challenge" size={128} color="accent" />
-        <Icon glyph="event-code" size={64} color="info" mx={2} />
-        <Icon glyph="important" size={32} color="primary" />
+        <Icon glyph="challenge" size={128} color="accent"/>
+        <Icon glyph="event-code" size={64} color="info" mx={2}/>
+        <Icon glyph="important" size={32} color="primary"/>
       </Flex>
       <LargeButton
         href="https://hackclub-icons.now.sh/"
@@ -26,4 +26,4 @@ storiesOf('Icon', module)
         See all icons
       </LargeButton>
     </div>
-  ))
+  ));

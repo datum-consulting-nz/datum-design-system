@@ -1,17 +1,17 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
-import { Field } from '../src'
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { withInfo } from "@storybook/addon-info";
+import { Field } from "../src";
 
-storiesOf('Field', module)
+storiesOf("Field", module)
   .add(
-    'Field component',
+    "Field component",
     withInfo({
       inline: true,
-      text: 'Compound component for form fields.'
-    })(() => <Field name="fname" label="First name" placeholder="Zach" />)
+      text: "Compound component for form fields."
+    })(() => <Field name="fname" label="First name" placeholder="Zach"/>)
   )
-  .add('with error', () => (
+  .add("with error", () => (
     <Field
       name="email"
       type="email"
@@ -20,7 +20,7 @@ storiesOf('Field', module)
       error="can’t be blank"
     />
   ))
-  .add('textarea type', () => (
+  .add("textarea type", () => (
     <Field
       name="comment"
       type="textarea"
@@ -28,7 +28,7 @@ storiesOf('Field', module)
       placeholder="Be nice :)"
     />
   ))
-  .add('select type', () => (
+  .add("select type", () => (
     <Field name="select" type="select" label="Select something">
       <option>Two</option>
       <option>Four</option>
@@ -37,4 +37,4 @@ storiesOf('Field', module)
       <option>Thirty-Two</option>
       <option>Sixty-Four</option>
     </Field>
-  ))
+  ));
