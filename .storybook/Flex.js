@@ -1,9 +1,9 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { Flex, Box } from "../src";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { Flex, Box } from '../src';
 
-storiesOf("Flex", module)
-  .add("Basic", () => (
+storiesOf('Flex', module)
+  .add('Basic', () => (
     <Flex align="center">
       <Box width={1 / 2} p={3} color="white" bg="primary">
         Flex
@@ -13,7 +13,7 @@ storiesOf("Flex", module)
       </Box>
     </Flex>
   ))
-  .add("Wrap", () => (
+  .add('Wrap', () => (
     <Flex wrap>
       <Box width={[1, 1 / 2]} p={3} color="white" bg="primary">
         Flex
@@ -26,7 +26,7 @@ storiesOf("Flex", module)
       </Box>
     </Flex>
   ))
-  .add("Justify", () => (
+  .add('Justify', () => (
     <Flex justify="space-around">
       <Box width={1 / 3} p={2} color="white" bg="primary">
         Flex
@@ -36,7 +36,7 @@ storiesOf("Flex", module)
       </Box>
     </Flex>
   ))
-  .add("Direction", () => (
+  .add('Direction', () => (
     <Flex flexDirection="column">
       <Box width={1 / 3} p={2} color="white" bg="primary">
         Flex

@@ -1,8 +1,8 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { Hide, Flex } from "../src";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { Hide, Flex } from '../src';
 
-storiesOf("Hide", module).add("Hide", () => (
+storiesOf('Hide', module).add('Hide', () => (
   <Flex justify="space-between" color="white">
     <Hide xs p={2} bg="red.5">
       Hide xs

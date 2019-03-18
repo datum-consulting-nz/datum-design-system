@@ -1,17 +1,17 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
-import { LargeButton } from "../src";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
+import { LargeButton } from '../src';
 
-storiesOf("LargeButton", module)
+storiesOf('LargeButton', module)
   .add(
-    "LargeButton component",
+    'LargeButton component',
     withInfo({
       inline: true,
-      text: "A bigger <Button /> component."
+      text: 'A bigger <Button /> component.'
     })(() => <LargeButton>Button</LargeButton>)
   )
-  .add("Colors", () => (
+  .add('Colors', () => (
     <div>
       <LargeButton mr={3}>Button</LargeButton>
       <LargeButton bg="accent" mr={3}>
@@ -25,5 +25,5 @@ storiesOf("LargeButton", module)
       </LargeButton>
     </div>
   ))
-  .add("Width", () => <LargeButton w={1}>Full Width</LargeButton>)
-  .add("Disabled", () => <LargeButton disabled>Disabled</LargeButton>);
+  .add('Width', () => <LargeButton w={1}>Full Width</LargeButton>)
+  .add('Disabled', () => <LargeButton disabled>Disabled</LargeButton>);

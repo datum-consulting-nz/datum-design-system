@@ -1,12 +1,12 @@
-import React from 'react'
-import renderer from 'react-test-renderer'
-import { ThemeProvider, theme } from '..'
-import { Base } from '../ThemeProvider'
-import styled from 'styled-components'
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { ThemeProvider, theme } from '..';
+import { Base } from '../ThemeProvider';
+import styled from 'styled-components';
 
 const Content = styled.p`
   color: ${({ theme }) => theme.colors.primary};
-`
+`;
 
 describe('ThemeProvider', () => {
   test('renders content with theme', () => {
@@ -14,7 +14,7 @@ describe('ThemeProvider', () => {
       <ThemeProvider>
         <Content>Hello!</Content>
       </ThemeProvider>
-    )
-    expect(json).toMatchSnapshot()
-  })
-})
+    );
+    expect(json).toMatchSnapshot();
+  });
+});

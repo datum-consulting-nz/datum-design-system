@@ -1,10 +1,10 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
-import { BlockLink, BackgroundImage, Box, Text } from "../src";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
+import { BlockLink, BackgroundImage, Box, Text } from '../src';
 
-storiesOf("BlockLink", module).add(
-  "BlockLink",
+storiesOf('BlockLink', module).add(
+  'BlockLink',
   withInfo({
     inline: true,
     text: `<BlockLink /> is a styled-components wrapper of <Link /> component to remove text-decoration and color styles, and set display as block.`

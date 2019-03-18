@@ -1,6 +1,6 @@
-import React from "react";
-import { configure, addDecorator } from "@storybook/react";
-import { ThemeProvider, Box } from "../src";
+import React from 'react';
+import { configure, addDecorator } from '@storybook/react';
+import { ThemeProvider, Box } from '../src';
 
 addDecorator(story => (
   <ThemeProvider webfonts>
@@ -8,7 +8,7 @@ addDecorator(story => (
   </ThemeProvider>
 ));
 
-const req = require.context(".", true, /\.js$/);
+const req = require.context('.', true, /\.js$/);
 
 const load = () => {
   req.keys().forEach(req);

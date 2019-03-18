@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { storiesOf } from "@storybook/react";
-import { Flex, Box, Text, Icon, Image, Heading, Card, theme } from "../src";
+import React from 'react';
+import styled from 'styled-components';
+import { storiesOf } from '@storybook/react';
+import { Flex, Box, Text, Icon, Image, Heading, Card, theme } from '../src';
 
-storiesOf("Layout Examples", module)
-  .add("Grid", () => (
+storiesOf('Layout Examples', module)
+  .add('Grid', () => (
     <Box p={4}>
       <Flex wrap mx={-3} color="white">
         <Box width={[1, 1 / 2]} px={3} mb={4}>
@@ -20,24 +20,24 @@ storiesOf("Layout Examples", module)
       </Flex>
     </Box>
   ))
-  .add("Two-column", () => (
+  .add('Two-column', () => (
     <Flex color="white">
       <Box px={3} width={1 / 4}>
-        <Box bg="green.6" style={{ minHeight: "50vh" }}>
+        <Box bg="green.6" style={{ minHeight: '50vh' }}>
           <Text p={3}>Hello</Text>
         </Box>
       </Box>
       <Box px={3} width={3 / 4}>
-        <Box bg="teal.6" style={{ minHeight: "50vh" }}>
+        <Box bg="teal.6" style={{ minHeight: '50vh' }}>
           <Text p={3}>Hello</Text>
         </Box>
       </Box>
     </Flex>
   ))
-  .add("Navbar", () => (
+  .add('Navbar', () => (
     <Flex p={2} align="center" color="white" bg="accent">
       <Border mr={3}>
-        <Icon glyph="menu"/>
+        <Icon glyph="menu" />
       </Border>
       <Text bold mx={2}>
         Hello
@@ -48,7 +48,7 @@ storiesOf("Layout Examples", module)
       </Text>
     </Flex>
   ))
-  .add("Tiled Cards", () => (
+  .add('Tiled Cards', () => (
     <Flex wrap>
       {cards.map(card => (
         <Box key={card.id} p={3} width={[1 / 2, 1 / 3, 1 / 4]}>
@@ -66,7 +66,7 @@ const Border = styled(Box)`
 
 const Tile = ({ image, title, text }) => (
   <Card boxShadowSize="sm">
-    <Image src={image} width="512" height="256"/>
+    <Image src={image} width="512" height="256" />
     <Box p={2}>
       <Heading fontSize={2} bold>
         {title}
@@ -80,7 +80,7 @@ const Tile = ({ image, title, text }) => (
 
 const cards = Array.from({ length: 12 }).map((n, i) => ({
   id: i,
-  title: "Hello" + i,
-  text: "Card",
-  image: `http://placehold.it/512x256/${theme.colors.accent.replace("#", "")}`
+  title: 'Hello' + i,
+  text: 'Card',
+  image: `http://placehold.it/512x256/${theme.colors.accent.replace('#', '')}`
 }));

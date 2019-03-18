@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Text from "./Text";
 import theme from "./theme";
+import React from "react";
 
 const Heading = Text.withComponent("h2").extend`
   line-height: 1.25;

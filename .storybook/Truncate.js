@@ -1,7 +1,7 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
-import { Box, Truncate } from "../src";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
+import { Box, Truncate } from '../src';
 
 const loripsum = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis est, qui non oderit libidinosam, protervam adolescentiam? Sed ego in hoc resisto; Ratio enim nostra consentit, pugnat oratio. Nihil enim hoc differt.
@@ -15,16 +15,16 @@ Equidem, sed audistine modo de Carneade? Confecta res esset. Audeo dicere, inqui
 Duo Reges: constructio interrete. Mihi enim satis est, ipsis non satis. Si enim ita est, vide ne facinus facias, cum mori suadeas. Illud dico, ea, quae dicat, praeclare inter se cohaerere. Est enim tanti philosophi tamque nobilis audacter sua decreta defendere.
 `;
 
-storiesOf("Truncate", module)
+storiesOf('Truncate', module)
   .add(
-    "Truncate component",
+    'Truncate component',
     withInfo({
       inline: true,
       text:
-        "Use the <Truncate /> component as an extension of the Text component with pure CSS solution to truncate long string with ellipsis."
+        'Use the <Truncate /> component as an extension of the Text component with pure CSS solution to truncate long string with ellipsis.'
     })(() => <Truncate width={50}>{loripsum}</Truncate>)
   )
-  .add("inside Box", () => (
+  .add('inside Box', () => (
     <Box width={1 / 3}>
       <Truncate>{loripsum}</Truncate>
     </Box>

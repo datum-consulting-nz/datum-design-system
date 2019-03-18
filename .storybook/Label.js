@@ -1,18 +1,18 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
-import { Label, Input } from "../src";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
+import { Label, Input } from '../src';
 
-storiesOf("Label", module)
+storiesOf('Label', module)
   .add(
-    "Label component",
+    'Label component',
     withInfo({
       inline: true,
       text:
-        "Simple styled label component that supports a number of the styled-system props."
+        'Simple styled label component that supports a number of the styled-system props.'
     })(() => <Label m={3}>Label Component</Label>)
   )
-  .add("Using fontSize", () => (
+  .add('Using fontSize', () => (
     <div>
       <Label fontSize={6}>Label with fontSize 6</Label>
       <Label fontSize={5}>Label with fontSize 5</Label>
@@ -23,7 +23,7 @@ storiesOf("Label", module)
       <Label fontSize={0}>Label with fontSize 0</Label>
     </div>
   ))
-  .add("Spacing", () => (
+  .add('Spacing', () => (
     <div>
       <Label mt={4} mb={2}>
         A tish of margin
@@ -31,20 +31,20 @@ storiesOf("Label", module)
       <Label pl={3}>A dash of padding</Label>
     </div>
   ))
-  .add("Colors", () => (
+  .add('Colors', () => (
     <div>
       <Label color="primary">A primary label</Label>
       <Label color="accent">An accent label</Label>
     </div>
   ))
-  .add("htmlFor", () => (
+  .add('htmlFor', () => (
     <div>
-      Clicking{" "}
+      Clicking{' '}
       <Label fontSize={4} htmlFor="sample-input">
         here
-      </Label>{" "}
+      </Label>{' '}
       should focus on the input element.
-      <br/>
-      <Input id="sample-input"/>
+      <br />
+      <Input id="sample-input" />
     </div>
   ));
