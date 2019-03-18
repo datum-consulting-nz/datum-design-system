@@ -3,11 +3,11 @@ import { storiesOf } from "@storybook/react";
 import styled from "styled-components";
 import { Box, Flex, Text, Heading, theme } from "../src";
 
-const keys = Object.keys(theme.colors).filter(
-  key => !Array.isArray(theme.colors[key])
-);
-
-const next = keys.map(key => ({ key, value: theme.colors[key] }));
+const getKeys = function(colorObject) {
+  let keys = Object.keys(colorObject).filter(
+    key => !Array.isArray(colorObject[key]));
+  return keys.map(key => ({ key, value: colorObject[key] }));
+};
 
 const Chip = props => <Box w={1} p={5} {...props} />;
 
@@ -27,19 +27,32 @@ const Card = ({ name, color }) => (
   </Box>
 );
 
-storiesOf("Color", module).add("Palette", () => (
-  <div>
-    <Heading.h1 p={3} f={[4, 5]}>
-      Color Palette
-    </Heading.h1>
-    <Flex wrap>
-      {next.map(color =>
-        !color.key[color.key.length - 1].match(/^\d+$/) ? (
-          <Box key={color.key} p={3} width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 5]}>
-            <Card name={color.key} color={color.value}/>
-          </Box>
-        ) : null
-      )}
-    </Flex>
-  </div>
-));
+storiesOf("Color", module)
+  .add("All colors", () => (
+    <div>
+      <Heading.h1 p={3} f={[4, 5]}>
+        Brand Color Pallet
+      </Heading.h1>
+      <Flex wrap>
+        {getKeys(theme.brandColors).map(color =>
+          !color.key[color.key.length - 1].match(/^\d+$/) ? (
+            <Box key={color.key} p={3} width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 5]}>
+              <Card name={color.key} color={color.value}/>
+            </Box>
+          ) : null
+        )}
+      </Flex>
+      <Heading.h1 p={3} f={[4, 5]}>
+        Gray Color Pallet
+      </Heading.h1>
+      <Flex wrap>
+        {getKeys(theme.grayColors).map(color =>
+          !color.key[color.key.length - 1].match(/^\d+$/) ? (
+            <Box key={color.key} p={3} width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 5]}>
+              <Card name={color.key} color={color.value}/>
+            </Box>
+          ) : null
+        )}
+      </Flex>
+    </div>
+  ));

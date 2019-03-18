@@ -2,34 +2,33 @@ import palx from "palx";
 import { includes, get, omit } from "lodash";
 import { removeProps } from "styled-system";
 
-const red = "#e42d42";
-const blue = "#2d9ce4";
-export const palette = palx(blue);
+const primaryColor = "#368ff5";
+export const palette = palx(primaryColor);
 
-export const grays = {
-  darker: "#121217",
-  dark: "#17171d",
+export const grayColors = {
+  trueBlack: "#000000",
   black: palette.black,
   slate: palette.gray[8],
-  silver: palette.gray[7],
-  smoke: palette.gray[2],
-  snow: palette.gray[0],
-  white: "#ffffff"
+  silver: palette.gray[5],
+  smokeWhite: palette.gray[2],
+  snowWhite: palette.gray[0],
+  trueWhite: "#ffffff"
 };
 
-export const brand = {
-  primary: red,
-  accent: palette.indigo[4],
-  success: palette.teal[5],
-  info: palette.blue[5],
-  warning: palette.orange[5],
-  error: palette.red[7],
-  muted: grays.silver
+export const brandColors = {
+  primary: palette.blue[5],
+  lightPrimary: palette.blue[3],
+  darkPrimary: palette.blue[7],
+  accent: palette.orange[5],
+  lightAccent: palette.orange[3],
+  darkAccent: palette.orange[7],
+  successGreen: palette.green[5],
+  errorRed: palette.red[5]
 };
 
 export const colors = {
-  ...brand,
-  ...grays,
+  ...brandColors,
+  ...grayColors,
   ...palette
 };
 
@@ -145,6 +144,8 @@ const theme = {
   regular,
   bold,
   colors,
+  brandColors,
+  grayColors,
   radii,
   radius,
   pill,
