@@ -1,8 +1,9 @@
 import React from "react";
 import Text from "./Text";
 import { Fragment } from "react";
+import styled from "styled-components";
 
-const TranslatedText = Text.extend`
+const TranslatedText = styled(Text)`
   transform:translateY(40px);
 `;
 
@@ -15,7 +16,7 @@ TranslatedText.defaultProps = {
   color: "smokeWhite"
 };
 
-const TranslatedHeading = Text.withComponent("h1").extend`
+const TranslatedHeading = styled(Text.withComponent("h1"))`
   transform:translateY(-35px);
 `;
 

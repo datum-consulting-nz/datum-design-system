@@ -11,7 +11,7 @@ import {
 } from "styled-system";
 import PropTypes from "prop-types";
 
-const Button = Box.withComponent("a").extend`
+const Button = styled(Box.withComponent("a"))`
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   vertical-align: middle;

@@ -1,9 +1,32 @@
 import React, { Fragment } from "react";
-import { ThemeProvider as Root, injectGlobal, css } from "styled-components";
+import { ThemeProvider as Root, createGlobalStyle } from "styled-components";
 import PropTypes from "prop-types";
 import theme from "./theme";
 
-const fontsCss = css`
+// const fontsCss = css`
+//   @font-face {
+//     font-family: 'Phantom Sans';
+//     src: url('https://hackclub.com/fonts/Phantom_Sans_0.4/Regular.woff')
+//         format('woff'),
+//       url('https://hackclub.com/fonts/Phantom_Sans_0.4/Regular.woff2')
+//         format('woff2');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+//   }
+//   @font-face {
+//     font-family: 'Phantom Sans';
+//     src: url('https://hackclub.com/fonts/Phantom_Sans_0.4/Bold.woff')
+//         format('woff'),
+//       url('https://hackclub.com/fonts/Phantom_Sans_0.4/Bold.woff2')
+//         format('woff2');
+//     font-weight: bold;
+//     font-style: normal;
+//     font-display: swap;
+//   }
+// `;
+
+const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Phantom Sans';
     src: url('https://hackclub.com/fonts/Phantom_Sans_0.4/Regular.woff')
@@ -24,9 +47,7 @@ const fontsCss = css`
     font-style: normal;
     font-display: swap;
   }
-`;
 
-injectGlobal`
   * {
     box-sizing: border-box;
     font-weight: inherit;
@@ -67,13 +88,15 @@ injectGlobal`
 `;
 
 const ThemeProvider = ({ theme, webfonts, ...props }) => {
-  if (webfonts) injectGlobal([], fontsCss);
   return (
-    <Root
-      theme={theme}
-      {...props}
-      children={<Fragment>{props.children}</Fragment>}
-    />
+    <Fragment>
+      <GlobalStyle webfonts/>
+      <Root
+        theme={theme}
+        {...props}
+        children={<Fragment>{props.children}</Fragment>}
+      />
+    </Fragment>
   );
 };
 
