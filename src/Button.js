@@ -25,7 +25,7 @@ const Button = styled(Box.withComponent("a"))`
   cursor: pointer;
   transition: ${({ theme }) => theme.transition} box-shadow;
   box-shadow: 0 2px 4px ${({ theme }) => theme.shadowColor};
-  border-radius: ${({ theme }) => theme.pill};
+  ${'' /* border-radius: ${({ theme }) => theme.pill}; */}
   border: none;
 
   ${props =>

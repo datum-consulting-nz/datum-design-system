@@ -4,39 +4,40 @@ import { Fragment } from "react";
 import styled from "styled-components";
 
 const TranslatedText = styled(Text)`
-  transform:translateY(40px);
 `;
 
 TranslatedText.defaultProps = {
   align: "center",
   regular: true,
   bold: true,
-  f: 7,
-  m: 0,
+  f: [4,6,7],
+  mb: [-1,2,-3],
   color: "smokeWhite"
 };
 
 const TranslatedHeading = styled(Text.withComponent("h1"))`
-  transform:translateY(-35px);
+  color: ${props => props.color};
 `;
 
 TranslatedHeading.defaultProps = {
   align: "center",
   regular: true,
   bold: true,
-  f: 6,
-  m: 0
+  f: [3,5,6],
+  mt: [-5,-6,-6]
 };
 
 const SpecialHeading = (props) => {
-  const {text, placeholder} = props;
+  const {text, placeholder, color} = props;
   return (
     <Fragment>
       <TranslatedText>
-        {text}
-      </TranslatedText>
-      <TranslatedHeading>
         {placeholder ? placeholder : text}
+      </TranslatedText>
+      <TranslatedHeading
+        color={color}
+      >
+        {text}
       </TranslatedHeading>
     </Fragment>
   );

@@ -1,6 +1,6 @@
 {
   "name": "@mechatronick/datum-design-system",
-  "version": "0.0.5-1",
+  "version": "0.0.6-1",
   "description": "Datum Consulting Group's Design System",
   "main": "dist/index.js",
   "scripts": {
