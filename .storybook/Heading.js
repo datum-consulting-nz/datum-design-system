@@ -23,6 +23,12 @@ storiesOf('Heading', module)
         placeholder={'Place holder'}
         color={'blue'}
       />
+      <SpecialHeading
+        text={'Special Heading H1'}
+        placeholder={'Place holder'}
+        color={'blue'}
+        backgroundColor={'lightBlue'}
+      />
       <Heading.h1>Heading h1</Heading.h1>
       <Heading.h2>Heading h2 (default)</Heading.h2>
       <Heading.h3>Heading h3</Heading.h3>

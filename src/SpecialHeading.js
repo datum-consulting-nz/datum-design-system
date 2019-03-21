@@ -1,9 +1,11 @@
 import React from "react";
 import Text from "./Text";
+import Flex from "./Flex"
 import { Fragment } from "react";
 import styled from "styled-components";
 
 const TranslatedText = styled(Text)`
+  background-color: ${props => props.backgroundColor};
 `;
 
 TranslatedText.defaultProps = {
@@ -17,6 +19,7 @@ TranslatedText.defaultProps = {
 
 const TranslatedHeading = styled(Text.withComponent("h1"))`
   color: ${props => props.color};
+  background-color: ${props => props.backgroundColor};
 `;
 
 TranslatedHeading.defaultProps = {
@@ -28,14 +31,17 @@ TranslatedHeading.defaultProps = {
 };
 
 const SpecialHeading = (props) => {
-  const {text, placeholder, color} = props;
+  const {text, placeholder, color, backgroundColor} = props;
   return (
     <Fragment>
-      <TranslatedText>
+      <TranslatedText
+        backgroundColor={backgroundColor}
+      >
         {placeholder ? placeholder : text}
       </TranslatedText>
       <TranslatedHeading
         color={color}
+        backgroundColor={backgroundColor}
       >
         {text}
       </TranslatedHeading>
