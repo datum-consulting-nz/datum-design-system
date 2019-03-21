@@ -18,23 +18,23 @@ storiesOf('Heading', module)
   )
   .add('Using dot-notation with h1-h6', () => (
     <section>
-      <SpecialHeading
-        text={'Special Heading H1'}
-        placeholder={'Place holder'}
-        color={'blue'}
-      />
-      <SpecialHeading
-        text={'Special Heading H1'}
-        placeholder={'Place holder'}
-        color={'blue'}
-        backgroundColor={'lightBlue'}
-      />
       <Heading.h1>Heading h1</Heading.h1>
       <Heading.h2>Heading h2 (default)</Heading.h2>
       <Heading.h3>Heading h3</Heading.h3>
       <Heading.h4>Heading h4</Heading.h4>
       <Heading.h5>Heading h5</Heading.h5>
       <Heading.h6>Heading h6</Heading.h6>
+      <SpecialHeading
+        text={'Special Heading H1'}
+        placeholder={'Special Heading H1'}
+        color={'blue'}
+      />
+      <SpecialHeading
+        text={'Special Heading H1'}
+        placeholder={'Special Heading H1'}
+        color={'blue'}
+        backgroundColor={'lightBlue'}
+      />
     </section>
   ))
   .add('Using <Text> props', () => (

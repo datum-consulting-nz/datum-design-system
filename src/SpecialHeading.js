@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 const TranslatedText = styled(Text)`
   background-color: ${props => props.backgroundColor};
+  margin: 0;
 `;
 
 TranslatedText.defaultProps = {
@@ -13,27 +14,30 @@ TranslatedText.defaultProps = {
   regular: true,
   bold: true,
   f: [4,6,7],
-  mb: [-1,2,-3],
   color: "smokeWhite"
 };
 
 const TranslatedHeading = styled(Text.withComponent("h1"))`
   color: ${props => props.color};
-  background-color: ${props => props.backgroundColor};
 `;
 
 TranslatedHeading.defaultProps = {
   align: "center",
   regular: true,
   bold: true,
-  f: [3,5,6],
-  mt: [-5,-6,-6]
+  f: [3,5,6]
 };
 
 const SpecialHeading = (props) => {
   const {text, placeholder, color, backgroundColor} = props;
   return (
-    <Fragment>
+    <div
+      style={{
+        position: "relative",
+        margin: "0 auto", 
+        textAlign: "center"
+      }}
+    >
       <TranslatedText
         backgroundColor={backgroundColor}
       >
@@ -41,11 +45,16 @@ const SpecialHeading = (props) => {
       </TranslatedText>
       <TranslatedHeading
         color={color}
-        backgroundColor={backgroundColor}
+        style={{
+          position: "absolute",
+          top: "0",
+          width: "100%",
+          margin: "0 auto"
+        }}
       >
         {text}
       </TranslatedHeading>
-    </Fragment>
+    </div>
   );
 };
 
