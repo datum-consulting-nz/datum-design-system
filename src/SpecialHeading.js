@@ -5,7 +5,7 @@ import { Fragment } from "react";
 import styled from "styled-components";
 
 const TranslatedText = styled(Text)`
-  background-color: ${props => props.backgroundColor};
+  background-color: ${props => props.backgroundcolor};
   margin: 0;
 `;
 
@@ -19,6 +19,7 @@ TranslatedText.defaultProps = {
 
 const TranslatedHeading = styled(Text.withComponent("h1"))`
   color: ${props => props.color};
+  background-color: ${props => props.backgroundcolor};
 `;
 
 TranslatedHeading.defaultProps = {
@@ -29,7 +30,7 @@ TranslatedHeading.defaultProps = {
 };
 
 const SpecialHeading = (props) => {
-  const {text, placeholder, color, backgroundColor} = props;
+  const {text, placeholder, color, backgroundcolor} = props;
   return (
     <div
       style={{
@@ -39,7 +40,7 @@ const SpecialHeading = (props) => {
       }}
     >
       <TranslatedText
-        backgroundColor={backgroundColor}
+        backgroundcolor={backgroundcolor}
       >
         {placeholder ? placeholder : text}
       </TranslatedText>

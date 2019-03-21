@@ -33,7 +33,7 @@ storiesOf('Heading', module)
         text={'Special Heading H1'}
         placeholder={'Special Heading H1'}
         color={'blue'}
-        backgroundColor={'lightBlue'}
+        backgroundcolor={'lightBlue'}
       />
     </section>
   ))
