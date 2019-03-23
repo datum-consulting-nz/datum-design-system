@@ -4,7 +4,7 @@ import { propTypes } from "styled-system";
 import theme from "./theme";
 
 const Label = styled(Text.withComponent("label"))`
-  display: block;
+  display: inline-block;
 
   a {
     color: ${({ theme }) => theme.colors.info};

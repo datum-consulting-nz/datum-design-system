@@ -24,7 +24,7 @@ storiesOf('Field', module)
     <Field
       name="comment"
       type="textarea"
-      label="Write a comment"
+      label="Write a comment hello"
       placeholder="Be nice :)"
     />
   ))

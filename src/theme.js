@@ -5,16 +5,6 @@ import { removeProps } from "styled-system";
 const primaryColor = "#368ff5";
 export const palette = palx(primaryColor);
 
-export const grayColors = {
-  trueBlack: "#000000",
-  black: palette.black,
-  slate: palette.gray[8],
-  silver: palette.gray[5],
-  smokeWhite: palette.gray[2],
-  snowWhite: palette.gray[0],
-  trueWhite: "#ffffff"
-};
-
 export const brandColors = {
   primary: palette.blue[5],
   lightPrimary: palette.blue[3],
@@ -26,9 +16,75 @@ export const brandColors = {
   errorRed: palette.red[5]
 };
 
+export const grayColors = {
+  trueBlack: "#000000",
+  black: palette.black,
+  slate: palette.gray[8],
+  silver: palette.gray[5],
+  smokeWhite: palette.gray[2],
+  snowWhite: palette.gray[0],
+  trueWhite: "#ffffff"
+};
+
+export const blueColors = {
+  blue0: palette.blue[0],
+  blue1: palette.blue[1],
+  blue2: palette.blue[2],
+  blue3: palette.blue[3],
+  blue4: palette.blue[4],
+  blue5: palette.blue[5],
+  blue6: palette.blue[6],
+  blue7: palette.blue[7],
+  blue8: palette.blue[8],
+  blue9: palette.blue[9],
+}
+
+export const orangeColors = {
+  orange0: palette.orange[0],
+  orange1: palette.orange[1],
+  orange2: palette.orange[2],
+  orange3: palette.orange[3],
+  orange4: palette.orange[4],
+  orange5: palette.orange[5],
+  orange6: palette.orange[6],
+  orange7: palette.orange[7],
+  orange8: palette.orange[8],
+  orange9: palette.orange[9],
+}
+
+export const greenColors = {
+  green0: palette.green[0],
+  green1: palette.green[1],
+  green2: palette.green[2],
+  green3: palette.green[3],
+  green4: palette.green[4],
+  green5: palette.green[5],
+  green6: palette.green[6],
+  green7: palette.green[7],
+  green8: palette.green[8],
+  green9: palette.green[9],
+}
+
+export const violetColors = {
+  violet0: palette.violet[0],
+  violet1: palette.violet[1],
+  violet2: palette.violet[2],
+  violet3: palette.violet[3],
+  violet4: palette.violet[4],
+  violet5: palette.violet[5],
+  violet6: palette.violet[6],
+  violet7: palette.violet[7],
+  violet8: palette.violet[8],
+  violet9: palette.violet[9],
+}
+
 export const colors = {
   ...brandColors,
   ...grayColors,
+  ...blueColors,
+  ...greenColors,
+  ...violetColors,
+  ...orangeColors,
   ...palette
 };
 
@@ -146,6 +202,10 @@ const theme = {
   colors,
   brandColors,
   grayColors,
+  blueColors,
+  orangeColors,
+  greenColors,
+  violetColors,
   radii,
   radius,
   pill,

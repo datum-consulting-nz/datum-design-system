@@ -29,12 +29,12 @@ const Field = ({ type, name, label, placeholder, error, ...props }) => {
       textarea: InputTextarea
     }[type] || Input;
   return (
-    <Label className={type} id={name} mb={2}>
+    <Label className={type} id={name} mb={2} style={{width:"100%"}}>
       <Flex align="center" mb="2px" wrap>
         {label}
         {error && <Error children={error}/>}
       </Flex>
-      <Component name={name} type={type} placeholder={placeholder} {...props} />
+      <Component style={{width:"100%"}} name={name} type={type} placeholder={placeholder} {...props} />
     </Label>
   );
 };

@@ -17,18 +17,16 @@ const Base = props => {
 };
 
 const Input = styled(Base)`
-  appearance: none;
-  display: block;
+  display: inline-block;
   vertical-align: middle;
-  max-width: 32rem;
+  max-width: 100%;
   min-height: 36px;
   line-height: inherit;
   font-family: inherit;
-  background-color: transparent;
-  border-radius: ${({ theme }) => theme.radius};
-  border-width: 1px;
+  background-color: ${theme.colors.snowWhite};
+  border-width: 2px;
   border-style: solid;
-  border-color: ${({ theme }) => theme.colors.smoke};
+  border-color: ${({ theme }) => theme.brandColors.lightAccent};
   transition: ${({ theme }) => theme.transition} box-shadow;
 
   ::placeholder {
@@ -41,17 +39,20 @@ const Input = styled(Base)`
 
   &:focus {
     outline: none;
-    border-color: ${({ theme }) => theme.colors.info};
-    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.blue[2]};
+    border-color: ${({ theme }) => theme.brandColors.accent};
+    box-shadow: inset 0 0 4px 2px rgba(243,155,66,0.5);
+    background-color: ${theme.colors.trueWhite};
   }
 
   &[type='select'] {
     background: #fff url("data:image/svg+xml;charset=utf8,${chevron()}") no-repeat right .75rem center;
     background-size: .5rem;
+    padding: ${theme.space[2]}px;
   }
 
   &[type='textarea'] {
     resize: vertical;
+    padding: ${theme.space[2]}px;
   }
 
   ${fontSize} ${space} ${width} ${color};
@@ -71,11 +72,10 @@ Input.defaultProps = {
   theme,
   w: 1,
   m: 0,
-  py: 1,
+  py: 2,
   px: 2,
   fontSize: 2,
-  color: "inherit",
-  bg: "transparent"
+  color: "inherit"
 };
 
 export const InputSelect = Input.withComponent("select");

@@ -54,5 +54,45 @@ storiesOf('Color', module).add('All colors', () => (
         ) : null
       )}
     </Flex>
+    <Heading.h1 p={3} f={[4, 5]}>
+      Blue Color Pallet
+    </Heading.h1>
+    <Flex wrap>
+      {getKeys(theme.blueColors).map(color => (
+        <Box key={color.key} p={3} width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 5]}>
+          <Card name={color.key} color={color.value} />
+        </Box>
+      ))}
+    </Flex>
+    <Heading.h1 p={3} f={[4, 5]}>
+      Orange Color Pallet
+    </Heading.h1>
+    <Flex wrap>
+      {getKeys(theme.orangeColors).map(color => (
+        <Box key={color.key} p={3} width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 5]}>
+          <Card name={color.key} color={color.value} />
+        </Box>
+      ))}
+    </Flex>
+    <Heading.h1 p={3} f={[4, 5]}>
+      Green Color Pallet
+    </Heading.h1>
+    <Flex wrap>
+      {getKeys(theme.greenColors).map(color => (
+        <Box key={color.key} p={3} width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 5]}>
+          <Card name={color.key} color={color.value} />
+        </Box>
+      ))}
+    </Flex>
+    <Heading.h1 p={3} f={[4, 5]}>
+      Violet Color Pallet
+    </Heading.h1>
+    <Flex wrap>
+      {getKeys(theme.violetColors).map(color => (
+        <Box key={color.key} p={3} width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 5]}>
+          <Card name={color.key} color={color.value} />
+        </Box>
+      ))}
+    </Flex>
   </div>
 ));
