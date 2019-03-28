@@ -50,7 +50,6 @@ Text.propTypes = {
 
 Text.defaultProps = {
   theme,
-  fontSize: 1,
   m: 0
 };
 
