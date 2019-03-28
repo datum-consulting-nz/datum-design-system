@@ -29,21 +29,21 @@ Heading.h2.defaultProps = {
 
 Heading.h3 = Heading.withComponent('h3')
 Heading.h3.defaultProps = {
-  bold: true,
+  regular: true,
   f: 4,
   m: 0
 }
 
 Heading.h4 = Heading.withComponent('h4')
 Heading.h4.defaultProps = {
-  bold: true,
+  regular: true,
   f: 3,
   m: 0
 }
 
 Heading.h5 = Heading.withComponent('h5')
 Heading.h5.defaultProps = {
-  bold: true,
+  regular: true,
   f: 2,
   m: 0
 }
