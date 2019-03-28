@@ -120,7 +120,7 @@ const emoji = "\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\"";
 export const font = `"Phantom Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif,${emoji}`;
 export const mono = "SFMono-Regular,\"Roboto Mono\",Menlo,monospace";
 
-export const fontSizes = [13, 15, 18, 20, 24, 29, 36, 42, 48, 52];
+export const fontSizes = [12, 14, 16, 18, 22, 29, 36, 42, 48, 52];
 
 export const regular = "regular";
 export const bold = "bold";
