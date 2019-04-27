@@ -9,12 +9,11 @@ const Code = Text.withComponent('pre');
 
 const Flag = styled(Link)`
   display: inline-block;
-  background: url(//hackclub.com/orpheus_flag.svg) no-repeat;
+  background: url(https://datumhq.com/static/20e0cec1d5e27ebef7b881c14d7b5d0d/7dbf3/largeIcon.png) no-repeat;
   background-position: top center;
-  width: 8rem;
-  height: 3rem;
+  width: 10rem;
+  height: 5rem;
   z-index: 0;
-  margin-top: -1rem;
 `;
 
 storiesOf('👋 Welcome!', module).add('About the project', () => (
@@ -23,7 +22,7 @@ storiesOf('👋 Welcome!', module).add('About the project', () => (
     <Heading.h1 f={5}>Welcome!</Heading.h1>
     <Text f={3} my={2}>
       This is{' '}
-      <Link href="https://hackclub.com" underline children="Hack Club" />
+      <Link href="https://datumhq.com" underline children="Datum Consulting NZ" />
       ’s Design System.
     </Text>
     <Text>It’s a collection of React components designed to:</Text>
@@ -46,23 +45,23 @@ storiesOf('👋 Welcome!', module).add('About the project', () => (
       </Item>
     </List>
     <Code bg="snow" p={3} my={3}>
-      yarn add @hackclub/design-system
+      yarn add @mechatronick/datum-design-system
     </Code>
     <Flex align="center" wrap>
       <Button
-        href="https://github.com/hackclub/design-system"
+        href="https://github.com/mechatroNick/datum-design-system"
         mr={2}
         children="GitHub"
       />
       <Button
-        href="https://www.npmjs.com/package/@hackclub/design-system"
+        href="https://www.npmjs.com/package/@mechatronick/datum-design-system"
         inverted
         children="npm"
       />
     </Flex>
     <Flex align="center" mt={4}>
-      <Avatar src="https://hackclub.com/team/lachlan.jpg" size={48} mr={2} />
-      <Text>- @lachlanjc</Text>
+      <Avatar src="https://datumhq.com/static/f8f3be43ab1d99b0c53a2aa29129ad3a/49462/NickDo.png" size={48} mr={2} />
+      <Text>- mechatroNick.com</Text>
     </Flex>
   </Fragment>
 ));

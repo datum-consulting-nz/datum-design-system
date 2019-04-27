@@ -9,7 +9,7 @@ storiesOf('Avatar', module)
     withInfo({
       inline: true,
       text: 'A circular avatar image primitive.'
-    })(() => <Avatar src="https://hackclub.com/team/zach.png" />)
+    })(() => <Avatar src="https://datumhq.com/static/f8f3be43ab1d99b0c53a2aa29129ad3a/49462/NickDo.png" />)
   )
   .add('Team', () => (
     <React.Fragment>

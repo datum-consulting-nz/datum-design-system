@@ -10,10 +10,10 @@ storiesOf('Box', module)
       text:
         'A low-level layout component for setting width, margin, padding, and color',
       inline: true
-    })(() => <Box p={3}>Hello</Box>)
+    })(() => <Box p={3} bg="primary">Hello</Box>)
   )
-  .add('Padding', () => <Box p={3}>Hello</Box>)
-  .add('Margin', () => <Box m={3}>Hello</Box>)
+  .add('Padding', () => <Box p={3} bg="accent">Hello</Box>)
+  .add('Margin', () => <Box m={3} bg="accent">Hello</Box>)
   .add('Color', () => (
     <Box p={3} color="primary">
       Hello
@@ -25,17 +25,17 @@ storiesOf('Box', module)
     </Box>
   ))
   .add('Width', () => (
-    <Box p={3} width={1 / 2} color="white" bg="success">
+    <Box p={3} width={1 / 2} color="trueWhite" bg="successGreen">
       Half Width
     </Box>
   ))
   .add('Pixel Width', () => (
-    <Box p={3} width={256} color="white" bg="warning">
+    <Box p={3} width={256} color="trueWhite" bg="lightAccent">
       256px width
     </Box>
   ))
   .add('VW Width', () => (
-    <Box p={3} width="50vw" color="white" bg="error">
+    <Box p={3} width="50vw" color="trueWhite" bg="errorRed">
       50vw width
     </Box>
   ))

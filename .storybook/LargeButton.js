@@ -17,7 +17,7 @@ storiesOf('LargeButton', module)
       <LargeButton bg="accent" mr={3}>
         Accent
       </LargeButton>
-      <LargeButton bg="success" mr={3}>
+      <LargeButton bg="successGreen" mr={3}>
         Success
       </LargeButton>
       <LargeButton bg="accent" inverted mr={3}>
